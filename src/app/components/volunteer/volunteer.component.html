@@ -1,0 +1,30 @@
+
+<div id="volunteerForm">
+
+  <h3>
+    Create Volunteer Hours
+  </h3>
+
+  <form (ngSubmit)="newReport()">
+      <div>
+          <label for="volunteerDate">Date</label>
+          <br/>
+          <input type="date" [(ngModel)]="report.date" max="2100-12-31" class="form-control" name="volunteerDate" required/>
+      <br/>
+
+      <div>
+          <label for="volunteerHours">Number of Hours</label>
+          <br/>
+          <input type="text" [(ngModel)]="report.numberHours" maxlength="2" name="volunteerHours" class="form-control" required/> 
+      </div>
+      <br/>
+
+      <div>
+          <label for="volunteerDesc">Description</label>
+          <br/>
+          <input class="form-control" [(ngModel)]="report.description"  type="text" name="volunteerDesc" placeholder="What did you do?"> 
+      </div>
+      <br/>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+</div>

@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CalendarModule } from 'angular-calendar';
+import { ReactiveFormsModule } from '@angular/forms'; 
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
@@ -26,8 +27,9 @@ import { MyAccountEmergencyContactsComponent } from './components/myaccount/sect
 import { MembershipModalSignupComponent } from './components/membership/sections/membership.modalsignup/membership.modalsignup.component';
 import { MembershipRulesAndRegulationsComponent } from './components/membership/sections/membership.rulesandregulations/membership.rulesandregulations.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { VolunteerComponent } from './components/volunteer/volunteer.component';
 import { ContactUsComponent } from './components/contactus/contactus.component';
-import { ReportComponent } from './components/report/report.component';
+import { ReportComponent } from './components/report/report.component'
 
 
 @NgModule({
@@ -52,14 +54,16 @@ import { ReportComponent } from './components/report/report.component';
     HomeEventsComponent,
     HomeBoatImagesComponent,
     FaqComponent,
+    VolunteerComponent,
     ContactUsComponent,
-    ReportComponent,
+    ReportComponent
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    ReactiveFormsModule,
     CalendarModule.forRoot(), // for angular calendar
     NgbModule.forRoot(), // for angular boostrap
     RouterModule.forRoot([
@@ -73,6 +77,7 @@ import { ReportComponent } from './components/report/report.component';
       { path: 'about', component: AboutComponent},
       { path: 'membership', component: MembershipComponent },
       { path: 'faq', component: FaqComponent },
+      { path: 'volunteer', component: VolunteerComponent },
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'report', component: ReportComponent },
     ])
