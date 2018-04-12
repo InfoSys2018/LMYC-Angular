@@ -34,6 +34,7 @@ export class LoginComponent {
             .subscribe(authenticated => {
                 if (authenticated === true) {
                     this.router.navigate(['/home/']);
+                    location.reload();
                 }
             });
     }
